@@ -1,0 +1,6 @@
+FROM confluentinc/cp-kafka-connect:7.6.1
+
+# Source: the free event generator.
+RUN confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:0.6.4
+# Sink: the Snowflake Kafka Connector (a client-side plugin that feeds Snowpipe Streaming).
+RUN confluent-hub install --no-prompt snowflakeinc/snowflake-kafka-connector:4.2.2

@@ -1,0 +1,9 @@
+keys/*
+!keys/.gitkeep
+.env
+*.p8
+*.pem
+credentials/
+connect/*.generated.json
+BLOG_POST_NOTES.md
+prompt.md

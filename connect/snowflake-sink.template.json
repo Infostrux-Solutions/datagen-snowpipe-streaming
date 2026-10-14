@@ -1,0 +1,19 @@
+{
+  "name": "snowflake-sink-orders",
+  "config": {
+    "connector.class": "com.snowflake.kafka.connector.SnowflakeStreamingSinkConnector",
+    "tasks.max": "1",
+    "topics": "orders",
+    "snowflake.topic2table.map": "orders:ORDERS",
+    "snowflake.url.name": "https://<your-account>.snowflakecomputing.com",
+    "snowflake.user.name": "KAFKA_CONNECTOR_USER",
+    "snowflake.private.key": "__PRIVATE_KEY__",
+    "snowflake.role.name": "KAFKA_CONNECTOR_ROLE",
+    "snowflake.database.name": "KAFKA_DEMO",
+    "snowflake.schema.name": "STREAMING",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "snowflake.streaming.validate.compatibility.with.classic": "false"
+  }
+}
